@@ -1,7 +1,7 @@
 name: PSAE pre-review
 
 # Reviews every pull request when it is opened and on every push (force
-# pushes included). The review lives in demo-ai-reviewer/psae-pre-review-test.
+# pushes included). The review lives in demo-ai-reviewer/psae-pre-reviewer.
 
 on:
   pull_request:
@@ -16,5 +16,5 @@ jobs:
     concurrency:
       group: psae-pre-review-${{ github.event.pull_request.number }}
       cancel-in-progress: true
-    uses: demo-ai-reviewer/psae-pre-review-test/.github/workflows/pre-review.yml@main
+    uses: demo-ai-reviewer/psae-pre-reviewer/.github/workflows/pre-review.yml@main
     secrets: inherit
